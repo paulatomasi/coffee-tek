@@ -54,14 +54,22 @@
 		7D28CE1322A9C62B00EF4B96 /* coffee-tek */ = {
 			isa = PBXGroup;
 			children = (
-				7D28CE1422A9C62B00EF4B96 /* AppDelegate.swift */,
+				7D28CE2622A9C6DC00EF4B96 /* supporting-files */,
 				7D28CE1622A9C62B00EF4B96 /* ViewController.swift */,
 				7D28CE1822A9C62B00EF4B96 /* Main.storyboard */,
-				7D28CE1B22A9C62C00EF4B96 /* Assets.xcassets */,
-				7D28CE1D22A9C62C00EF4B96 /* LaunchScreen.storyboard */,
 				7D28CE2022A9C62C00EF4B96 /* Info.plist */,
 			);
 			path = "coffee-tek";
+			sourceTree = "<group>";
+		};
+		7D28CE2622A9C6DC00EF4B96 /* supporting-files */ = {
+			isa = PBXGroup;
+			children = (
+				7D28CE1422A9C62B00EF4B96 /* AppDelegate.swift */,
+				7D28CE1B22A9C62C00EF4B96 /* Assets.xcassets */,
+				7D28CE1D22A9C62C00EF4B96 /* LaunchScreen.storyboard */,
+			);
+			path = "supporting-files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
