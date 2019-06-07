@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pBs-MX-0lH">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,19 +14,19 @@
         <!--On Boarding Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnBoardingController" customModule="coffee_tek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="BYZ-38-t0r" customClass="OnBoardingController" customModule="coffee_tek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QNa-vx-zJN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="368"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="348.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="artwork" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-3p-49v">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="311.5"/>
                                     </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-I2-Uwr">
-                                        <rect key="frame" x="192" y="331" width="30" height="37"/>
+                                        <rect key="frame" x="192" y="311.5" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="UY0-0V-vye"/>
                                         </constraints>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1" text="Get the best coffee in town!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-xx-rRs">
-                                <rect key="frame" x="97" y="427" width="220" height="76.5"/>
+                                <rect key="frame" x="97" y="363.5" width="220" height="76.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="4pS-cK-XUh"/>
                                 </constraints>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhB-e8-AOj" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
-                                <rect key="frame" x="30" y="630.5" width="354" height="50"/>
+                                <rect key="frame" x="30" y="567" width="354" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hJD-b4-NrK"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-DN-AnL">
-                                <rect key="frame" x="30" y="565.5" width="354" height="50"/>
+                                <rect key="frame" x="30" y="502" width="354" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-EG-WvU" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="169.5" height="50"/>
@@ -103,6 +103,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="FgO-5N-0x6" kind="show" id="0ww-Hc-l6S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -127,10 +130,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="aAo-9z-Iui"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="22.767857142857142"/>
+            <point key="canvasLocation" x="890" y="577"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XJg-aF-H2L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pBs-MX-0lH" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="EeR-Ud-Nxj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EAl-ND-B0J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhz-ro-w9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="577"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Xjo-hY-lki">
+            <objects>
+                <viewController title="Login" id="FgO-5N-0x6" customClass="LoginController" customModule="coffee_tek" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="naB-z5-v31">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0os-5y-kYZ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wto-yf-TCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="577"/>
         </scene>
     </scenes>
     <resources>

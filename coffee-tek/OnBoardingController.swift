@@ -10,5 +10,20 @@ import UIKit
 
 class OnBoardingController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let navigationController = navigationController {
+            navigationController.setNavigationBarHidden(true, animated: false)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let navigationController = navigationController {
+            navigationController.setNavigationBarHidden(false, animated: false)
+        }
+    }
 }
 
