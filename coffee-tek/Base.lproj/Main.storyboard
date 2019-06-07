@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,69 +16,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OnBoardingController" customModule="coffee_tek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artwork" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-3p-49v">
-                                <rect key="frame" x="0.0" y="44" width="375" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QNa-vx-zJN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="368"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="artwork" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-3p-49v">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
+                                    </imageView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-I2-Uwr">
+                                        <rect key="frame" x="192" y="331" width="30" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="UY0-0V-vye"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" name="light-brown"/>
+                                        <color key="currentPageIndicatorTintColor" name="brown"/>
+                                    </pageControl>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="eHj-cS-Zy4"/>
+                                    <constraint firstItem="Jwg-3p-49v" firstAttribute="leading" secondItem="QNa-vx-zJN" secondAttribute="leading" id="mlo-jK-Kf6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jwg-3p-49v" secondAttribute="trailing" id="zyT-xq-4gT"/>
                                 </constraints>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-I2-Uwr">
-                                <rect key="frame" x="172.66666666666666" y="404" width="30" height="37"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1" text="Get the best coffee in town!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-xx-rRs">
+                                <rect key="frame" x="97" y="427" width="220" height="76.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="UY0-0V-vye"/>
+                                    <constraint firstAttribute="width" constant="220" id="4pS-cK-XUh"/>
                                 </constraints>
-                                <color key="pageIndicatorTintColor" name="light-brown"/>
-                                <color key="currentPageIndicatorTintColor" name="brown"/>
-                            </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get the best coffee in town!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-xx-rRs">
-                                <rect key="frame" x="76" y="456" width="223" height="76.333333333333371"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="32"/>
                                 <color key="textColor" name="dark-brown"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-DN-AnL">
-                                <rect key="frame" x="30" y="597.33333333333337" width="315" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-EG-WvU" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                        <color key="backgroundColor" name="brown"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Register"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzk-Av-YSq" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="0.0" width="150" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="tintColor" name="brown"/>
-                                        <state key="normal" title="Log In"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="brown"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5NS-6C-vtE"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhB-e8-AOj" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
-                                <rect key="frame" x="30" y="667.33333333333337" width="315" height="50"/>
+                                <rect key="frame" x="30" y="630.5" width="354" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hJD-b4-NrK"/>
@@ -100,30 +71,66 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-DN-AnL">
+                                <rect key="frame" x="30" y="565.5" width="354" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-EG-WvU" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="50"/>
+                                        <color key="backgroundColor" name="brown"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Register"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzk-Av-YSq" customClass="DesignableButton" customModule="coffee_tek" customModuleProvider="target">
+                                        <rect key="frame" x="184.5" y="0.0" width="169.5" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="tintColor" name="brown"/>
+                                        <state key="normal" title="Log In"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="brown"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5NS-6C-vtE"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZCf-DN-AnL" firstAttribute="top" secondItem="bb4-xx-rRs" secondAttribute="bottom" constant="65" id="04O-be-vpJ"/>
-                            <constraint firstItem="bb4-xx-rRs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="5hk-je-jx1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bb4-xx-rRs" secondAttribute="trailing" constant="76" id="DoH-Ef-31P"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCf-DN-AnL" secondAttribute="trailing" constant="30" id="FCw-1e-Pg6"/>
-                            <constraint firstItem="Elq-I2-Uwr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IQJ-4K-acD"/>
-                            <constraint firstItem="vhB-e8-AOj" firstAttribute="top" secondItem="ZCf-DN-AnL" secondAttribute="bottom" constant="20" id="OkL-qA-6sd"/>
-                            <constraint firstItem="ZCf-DN-AnL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="QV6-gj-bfp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jwg-3p-49v" secondAttribute="trailing" id="SPO-SS-bQD"/>
-                            <constraint firstItem="Jwg-3p-49v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YuH-rJ-iGT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhB-e8-AOj" secondAttribute="trailing" constant="30" id="oEM-49-pSK"/>
-                            <constraint firstItem="Elq-I2-Uwr" firstAttribute="top" secondItem="Jwg-3p-49v" secondAttribute="bottom" id="sA8-yc-naA"/>
-                            <constraint firstItem="vhB-e8-AOj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="t2i-oC-ue1"/>
-                            <constraint firstItem="Jwg-3p-49v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tPS-Br-zLU"/>
-                            <constraint firstItem="bb4-xx-rRs" firstAttribute="top" secondItem="Elq-I2-Uwr" secondAttribute="bottom" constant="15" id="xIj-lD-BrZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCf-DN-AnL" secondAttribute="trailing" constant="30" id="2Uf-oa-32n"/>
+                            <constraint firstItem="QNa-vx-zJN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K8w-sb-aVz"/>
+                            <constraint firstItem="vhB-e8-AOj" firstAttribute="top" secondItem="ZCf-DN-AnL" secondAttribute="bottom" constant="15" id="Sv9-fH-ngR"/>
+                            <constraint firstItem="QNa-vx-zJN" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.45" id="USO-Z2-kuU"/>
+                            <constraint firstItem="ZCf-DN-AnL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vs3-W0-pTN"/>
+                            <constraint firstItem="ZCf-DN-AnL" firstAttribute="top" secondItem="bb4-xx-rRs" secondAttribute="bottom" constant="62" id="d4K-JK-bhG"/>
+                            <constraint firstItem="QNa-vx-zJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ef9-Ki-EyV"/>
+                            <constraint firstItem="vhB-e8-AOj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fIJ-wd-Xgz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhB-e8-AOj" secondAttribute="trailing" constant="30" id="gw2-96-7H6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNa-vx-zJN" secondAttribute="trailing" id="t6o-lp-HLa"/>
+                            <constraint firstItem="bb4-xx-rRs" firstAttribute="top" secondItem="QNa-vx-zJN" secondAttribute="bottom" constant="15" id="z0R-bF-Cbr"/>
+                            <constraint firstItem="bb4-xx-rRs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zs0-ox-dCy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
+            <point key="canvasLocation" x="52.173913043478265" y="22.767857142857142"/>
         </scene>
     </scenes>
     <resources>
